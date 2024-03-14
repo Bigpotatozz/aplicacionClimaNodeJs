@@ -68,28 +68,28 @@ const leerInput = async(message) => {
 
 
 
-const borrarTarea = async(tareas = []) => {
+const listarLugares = async(lugares = []) => {
 
-    let choices = tareas.map((elemento, indice) => {
+    let choices = lugares.map((elemento, indice) => {
 
         
         return {
             value: elemento.id,
-            name: `${`${indice + 1}`.green}. ${elemento.desc}`
+            name: `${`${indice + 1}`.green}. ${elemento.nombre}`
         }
 
     });
 
-    const opcionesBorrar = [{
+    const opcionesLugares = [{
         type: 'list',
-        name: 'opcion',
+        name: 'lugar',
         choices: choices
     }]
 
 
-    const {opcion} = await inquirer.prompt(opcionesBorrar);
+    const {lugar} = await inquirer.prompt(opcionesLugares);
 
-    return opcion;
+    return lugar;
 } 
 
 const confirmar = async(mensaje) => {
@@ -141,4 +141,4 @@ const mostrarListadoCheck = async(tareas = []) => {
 
 
 
-export {menuInquirer,pausa, leerInput, borrarTarea, confirmar, mostrarListadoCheck};
+export {menuInquirer,pausa, leerInput, confirmar, mostrarListadoCheck, listarLugares};
