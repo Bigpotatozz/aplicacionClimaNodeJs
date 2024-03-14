@@ -58,10 +58,10 @@ class Busquedas {
     };
 
 
-    agregarHistorial(lugar){
+    agregarHistorial(lugar = ""){
         
         if(this.historial.includes(lugar))
-    this.historial.unshift(lugar);
+        this.historial.unshift(lugar);
 
 
     }

@@ -31,11 +31,9 @@ const main = async() => {
             break;
             
             case '2':
-
-            busquedas.historial.forEach((e) => {
-                console.log(e); 
-            })
-
+                    busquedas.historial.forEach(e => {
+                        console.log(e);
+                    })
             break;
 
         }
